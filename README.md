@@ -4,7 +4,7 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 ## Get started
 
-1. Open components>Weather.tsx. On lines 21 and 33, and input your OpenWeatherMap tokens, read the comments there to do it right.
+1. Open components>Weather.tsx. On lines 21 and 33, and input your OpenWeatherMap tokens, refer to the comments on those lines.
 
 2. Install dependencies
 

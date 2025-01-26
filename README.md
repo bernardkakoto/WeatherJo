@@ -21,5 +21,5 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 4. Download the latest release to test the app on Andriod. May be unable to fetch weather conditions since the app uses a free OpenWeatherMap token which allows a 1000 searches per day. If app is unable to fetch weather conditions, then the searches per day has been exhausted by you and/or other testers.
 
 ## Credit
-1. Weather icon used is created by [Papirus Dev Team](https://www.iconarchive.com/show/papirus-apps-icons-by-papirus-team/weather-icon.html).
+Icon - [Papirus](https://www.iconarchive.com/show/papirus-apps-icons-by-papirus-team/weather-icon.html).
 

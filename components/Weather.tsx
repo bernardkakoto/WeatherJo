@@ -15,10 +15,10 @@ const Weather = () => {
     }
 
     setLoading(true);
-    setErrorMessage('');  // Reset any previous error message
+    setErrorMessage('');  // Reset all earlier error messages
 
     try {
-      const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=xx&units=metric`;//Replace your OpenWeatherMap token with the xx
+      const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=xx&units=metric`; //Replace xx with your OpenWeatherMap token
       const weatherResponse = await fetch(weatherUrl);
       const weatherData = await weatherResponse.json();
 
@@ -30,7 +30,7 @@ const Weather = () => {
 
       setWeather(weatherData);
 
-      const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=xx&units=metric`;//Replace your OpenWeatherMap token with the xx
+      const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=xx&units=metric`; //Replace xx with your OpenWeatherMap token
       const forecastResponse = await fetch(forecastUrl);
       const forecastData = await forecastResponse.json();
 

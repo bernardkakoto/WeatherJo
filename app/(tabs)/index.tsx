@@ -60,8 +60,7 @@ const Index = () => {
             <Text style={styles.modalTitle}>About WeatherUp</Text>
             <Text style={styles.modalText}>
               WeatherUp is a weather application that shows current weather conditions along with a 5-day forecast.
-              {'\n\n'}Built by Bernard Akoto for his portfolio using Expo Router, React Native, & OpenWeatherMap.
-              {'\n\n'}Weather icon gotten from https://www.iconarchive.com/show/papirus-apps-icons-by-papirus-team/weather-icon.html.
+              {'\n\n'}Built by Bernard Akoto for his portfolio using Expo Router, React Native, and OpenWeatherMap.
             </Text>
             <TouchableOpacity onPress={hideAboutAlert}>
               <Text style={styles.modalButtonText}>Close</Text>
@@ -94,7 +93,7 @@ const styles = StyleSheet.create({
   aboutTouchableArea: {
     position: 'absolute',
     right: 0,
-    padding: 20, // Increases clickable area
+    padding: 20,
   },
   aboutText: {
     color: '#F4A261',
@@ -103,7 +102,7 @@ const styles = StyleSheet.create({
   },
   modalOverlay: {
     flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.7)', // Black translucent background
+    backgroundColor: 'rgba(0, 0, 0, 0.7)', 
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -115,21 +114,21 @@ const styles = StyleSheet.create({
   },
   modalTitle: {
     fontSize: 20,
-    color: '#F4A261', // White text
+    color: '#F4A261', 
     fontFamily: 'DancingScript',
     marginBottom: 10,
     textAlign: 'center',
   },
   modalText: {
-    color: '#ffffff', // White text
+    color: '#ffffff', 
     fontSize: 14,
     marginBottom: 20,
     textAlign: 'left',
   },
   
   modalButtonText: {
-  color: '#F4A261', // Text color
+  color: '#F4A261', 
   fontSize: 16,
-  textAlign: 'center', // Ensures text is centered horizontally
+  textAlign: 'center',
   },
 });

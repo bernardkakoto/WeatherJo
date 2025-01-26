@@ -6,6 +6,7 @@ const Weather = () => {
   const [forecast, setForecast] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [city, setCity] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const fetchWeather = async (cityName: string) => {
     if (!cityName) {
@@ -14,14 +15,22 @@ const Weather = () => {
     }
 
     setLoading(true);
+    setErrorMessage('');  // Reset any previous error message
 
     try {
-      const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=a58b425a7330c7d069234576fdce8317&units=metric`;
+      const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=xx&units=metric`;//Replace your OpenWeatherMap token with the xx
       const weatherResponse = await fetch(weatherUrl);
       const weatherData = await weatherResponse.json();
+
+      if (weatherData.cod !== 200) {
+        setErrorMessage('Sorry, location cannot be found. Enter a different location.');
+        setLoading(false);
+        return;
+      }
+
       setWeather(weatherData);
 
-      const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=a58b425a7330c7d069234576fdce8317&units=metric`;
+      const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=xx&units=metric`;//Replace your OpenWeatherMap token with the xx
       const forecastResponse = await fetch(forecastUrl);
       const forecastData = await forecastResponse.json();
 
@@ -31,6 +40,7 @@ const Weather = () => {
       setForecast(dailyForecast);
     } catch (error) {
       console.error('Error fetching weather data', error);
+      setErrorMessage('Sorry, location cannot be found. Enter a different location.');
     } finally {
       setLoading(false);
     }
@@ -49,6 +59,9 @@ const Weather = () => {
           onSubmitEditing={() => fetchWeather(city)}
         />
         <Button title="Search by Location" onPress={() => fetchWeather(city)} />
+        {errorMessage ? (
+          <Text style={styles.errorMessage}>{errorMessage}</Text>
+        ) : null}
       </View>
 
       {loading ? (
@@ -109,8 +122,6 @@ const makeTitleCase = (text) => {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 };
-
-
 
 export default Weather;
 
@@ -192,5 +203,11 @@ const styles = StyleSheet.create({
     color: '#ADD8E6',
     fontSize: 16,
     fontWeight: 'bold',
+  },
+  errorMessage: {
+    color: 'white',
+    fontSize: 16,
+    marginTop: 10,
+    textAlign: 'center',
   },
 });

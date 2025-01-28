@@ -18,7 +18,7 @@ const Weather = () => {
     setErrorMessage('');  // Reset all earlier error messages
 
     try {
-      const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=xx&units=metric`; //Replace xx with your OpenWeatherMap token
+      const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=bc5f1911de23887358ff3b369aa8260c&units=metric`; //Replace xx with your OpenWeatherMap token
       const weatherResponse = await fetch(weatherUrl);
       const weatherData = await weatherResponse.json();
 
@@ -30,7 +30,7 @@ const Weather = () => {
 
       setWeather(weatherData);
 
-      const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=xx&units=metric`; //Replace xx with your OpenWeatherMap token
+      const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=bc5f1911de23887358ff3b369aa8260c&units=metric`; //Replace xx with your OpenWeatherMap token
       const forecastResponse = await fetch(forecastUrl);
       const forecastData = await forecastResponse.json();
 
@@ -49,7 +49,7 @@ const Weather = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.title}>WeatherUp</Text>
+        <Text style={styles.title}>WeatherJo</Text>
         <TextInput
           style={styles.input}
           placeholder="Location & Enter"

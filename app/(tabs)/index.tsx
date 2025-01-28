@@ -40,7 +40,7 @@ const Index = () => {
       <StatusBar barStyle="light-content" backgroundColor="#0a0a1a" />
 
       <View style={styles.weatherContainer}>
-        <Text style={styles.title}>WeatherUp</Text>
+        <Text style={styles.title}>WeatherJo</Text>
         <Weather />
       </View>
 
@@ -57,9 +57,9 @@ const Index = () => {
       >
         <View style={styles.modalOverlay}>
           <View style={styles.modalContainer}>
-            <Text style={styles.modalTitle}>About WeatherUp</Text>
+            <Text style={styles.modalTitle}>About WeatherJo</Text>
             <Text style={styles.modalText}>
-              WeatherUp is a weather application that shows current weather conditions along with a 5-day forecast.
+              WeatherJo is a weather application that shows current weather conditions along with a 5-day forecast.
               {'\n\n'}Built by Bernard Akoto for his portfolio using Expo Router, React Native, and OpenWeatherMap.
               {'\n\n'}OpenWeatherMap token being used for this app allows a 1000 API calls/searches per day. 
               If app is unable to fetch weather conditions, then the calls/searches per day has been exhausted by testers.

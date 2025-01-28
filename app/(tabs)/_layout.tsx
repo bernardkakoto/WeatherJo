@@ -6,7 +6,7 @@ export default function TabsLayout() {
       <Tabs.Screen 
         name="index" 
         options={{ 
-          title: "WeatherUp",
+          title: "WeatherJo",
           headerShown: false,
           tabBarStyle: { display: 'none' },
         }} 

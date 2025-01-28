@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "WeatherUp",
-    "slug": "Weatherup",
+    "name": "WeatherJo",
+    "slug": "weatherjo",
     "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "weatherup",
+    "scheme": "weatherjo",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -16,7 +16,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#0a0a1a"
       },
-      "package": "com.bernard.akoto.weatherup"
+      "package": "com.bernard.akoto.weatherjo"
     },
     "web": {
       "bundler": "metro",
@@ -43,8 +43,9 @@
         "origin": false
       },
       "eas": {
-        "projectId": "573570d5-e645-453b-87ed-cf64d3eab140"
+        "projectId": "c378062e-4e8b-4146-aab7-ea80716d0fd7"
       }
-    }
+    },
+    "owner": "bernard.akoto"
   }
 }

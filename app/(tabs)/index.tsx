@@ -61,8 +61,8 @@ const Index = () => {
             <Text style={styles.modalText}>
               WeatherUp is a weather application that shows current weather conditions along with a 5-day forecast.
               {'\n\n'}Built by Bernard Akoto for his portfolio using Expo Router, React Native, and OpenWeatherMap.
-              {'\n\n'}If app is unable to fetch weather conditions, then the searches per day has been exhausted by you and/or other testers.
-              OpenWeatherMap token which allows a 1000 searches per day.
+              {'\n\n'}OpenWeatherMap token being used for this app allows a 1000 API calls/searches per day. 
+              If app is unable to fetch weather conditions, then the calls/searches per day has been exhausted by testers.
             </Text>
             <TouchableOpacity onPress={hideAboutAlert}>
               <Text style={styles.modalButtonText}>Close</Text>
